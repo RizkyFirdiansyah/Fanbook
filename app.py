@@ -33,8 +33,6 @@ def homework_post():
     db.fanmessages.insert_one(doc)
     return jsonify({'msg' : 'Comment Posted'})
 
-# client = MongoClient('mongodb+srv://mrfrdsyh:fanbook@cluster0.njonkzl.mongodb.net/?retryWrites=true&w=majority')
-
 @app.route("/homework", methods=["GET"])
 def homework_get():
     message_list = list(db.fanmessages.find({}, {'_id': False}))
