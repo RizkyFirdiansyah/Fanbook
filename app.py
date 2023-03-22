@@ -24,7 +24,7 @@ def home():
 
 @app.route("/homework", methods=["POST"])
 def homework_post():
-    name_receive = request.form['sample_give']
+    name_receive = request.form['name_give']
     comment_receive = request.form['comment_give']
     doc = {
         'name' : name_receive,
